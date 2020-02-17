@@ -13,7 +13,6 @@ const Weather = () => {
     const [weatherData, setWeatherData] = useState({});
     useEffect(() => {
         fetch(`http://${API_URL_BASE}weather?zip=${zipcode},us&appid=${API_KEY}&units=imperial`)
-        //.then(response => response.json())
         .then(response => response.json())
         .then(
             (result) => {
@@ -28,11 +27,13 @@ const Weather = () => {
 
     return (
         <div>
-            <h1>Weather!</h1>
-            <h2>{zipcode}</h2>
-            <Temperature
-                {...weatherData.main}
-            />
+            {zipcode && <h1>{weatherData.name} ({zipcode})</h1>}
+            {zipcode && 
+                <Temperature
+                    {...weatherData.main}
+                
+                />
+            }
         </div>
     );
 };
