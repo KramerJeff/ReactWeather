@@ -5,19 +5,28 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import ZipCodeInput from './ZipCodeInput';
 
+const NavContainer = styled.nav`
+    display: flex;
+    background-color: #4E4D49;
+    height: 75px;
+    align-items: center;
+`;
+
+const NavLink = styled(Link)`
+    margin-left: 1rem;
+    color: #E96E50;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+`;
+
 const Navigation = (props) => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/weather">Weather</Link>
-                </li>
-            </ul>
+        <NavContainer>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/weather">Weather</NavLink>
             <ZipCodeInput onKeyDown={props.onKeyDown}/>
-        </nav>
+        </NavContainer>
     );
 };
 
