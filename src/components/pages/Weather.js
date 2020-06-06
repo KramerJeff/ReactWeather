@@ -10,6 +10,7 @@ const API_URL_BASE = 'api.openweathermap.org/data/2.5/';
 
 const Weather = () => {
     let {zipcode} = useParams();
+    if(zipcode === undefined) { zipcode = 20007; } //give a default zipcode
     const [weatherData, setWeatherData] = useState({});
     useEffect(() => {
         fetch(`http://${API_URL_BASE}weather?zip=${zipcode},us&appid=${API_KEY}&units=imperial`)

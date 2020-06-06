@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import {Link} from 'react-router-dom';
-import ZipCodeInput from './ZipCodeInput';
+import ZipCodeForm from './ZipCodeForm';
 
 const NavContainer = styled.nav`
     display: flex;
@@ -25,7 +25,7 @@ const Navigation = (props) => {
         <NavContainer>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/weather">Weather</NavLink>
-            <ZipCodeInput onKeyDown={props.onKeyDown}/>
+            <ZipCodeForm/>
         </NavContainer>
     );
 };
