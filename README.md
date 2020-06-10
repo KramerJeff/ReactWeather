@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is still in development and should not be used.
 
 ## Available Scripts
 
