@@ -1,4 +1,4 @@
-This project is still in development and should not be used.
+This project is still in development and should not be used. It was for a technical challenge as part of an interview and I thought it was an interesting idea to try and create.
 
 ## Available Scripts
 
